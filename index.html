@@ -1,0 +1,166 @@
+<!-- /* type-scale.com */
+
+    /*
+    SPACING SYSTEM (px)
+    2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+    FONT SIZE SYSTEM (px)
+    10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+    */ 
+  -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Omnifood Hero Section</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      font-family: 'Rubik', sans-serif;
+      color: #444;
+    }
+
+    .container {
+      margin: 0 auto;
+      width: 1200px;
+      /* background-color: red; */
+    }
+
+    header {
+      background-color: orangered;
+      /* height: 100%; ===> this won't work */
+      height: 100vh;
+      /* height of header is now 100% of the available viewport even when shrunk */
+      position: relative;
+
+      /* after all the text are taken care of, add the image */
+      /* background-image: url(hero.jpg); */
+      background-image: linear-gradient(
+        rgba(34, 34, 34, 0.6), 
+        rgba(34, 34, 34, 0.6)
+        /* rgba(34, 89, 122, 0.6) */
+        ), 
+        url(hero.jpg);
+      
+      /* shrink the image */
+      background-size: cover;
+      color: #fff;
+      /* darken down the image since there is not enough contrast w/ the txt & the img; create a linear gradient on the same background-image */
+    }
+
+    nav {
+      font-size: 20px;
+      font-weight: 700;
+      display: flex;
+      justify-content: space-between;
+      /* margin-top: 32px; ===> this won't work (this will create an empty white space outside the box---top part) bec margin of .container has been set to '0 auto', since class selector has more priority than an element selector; use padding instead */
+      padding-top: 32px;
+      /* background-color: green; */
+
+      /* how to create a gradient */
+      /* background-image: linear-gradient(to right, red, blue); */
+    }
+
+    .header-container {
+      /* to center .header-container vertically */
+      width: 1200px;
+      position: absolute;
+      /* in relation to the PARENT size */
+      left: 50%;
+      top: 50%;
+      /* set position of parent element <header> to relative afterwards */
+
+      /* to move it back up, use transform */
+      /* in relation to the ELEMENT size */
+      transform: translate(-50%, -50%);
+
+      /* background-color: violet; */
+
+    }
+
+    .header-container-inner {
+      width: 50%;
+      /* background-color: blue; */
+    }
+
+    h1 {
+      font-size: 52px;
+      margin-bottom: 32px;
+      line-height: 1.05;
+    }
+
+    p {
+      font-size: 20px;
+      line-height: 1.6;
+      margin-bottom: 40px;
+    }
+
+    .btn:link,
+    .btn:visited {
+      font-size: 20px;
+      font-weight: 600;
+      background-color: #e67e22;
+      color: #fff;
+      text-decoration: none;
+      /* display must be set to inline-block in order to apply padding */
+      display: inline-block;
+      padding: 16px 32px;
+      border-radius: 9px;
+    }
+
+    .btn:hover,
+    .btn:active {
+
+    }
+
+    h2 {
+      font-size: 44px;
+      margin-bottom: 48px;
+    }
+
+    section {
+      padding: 96px 0;
+      background-color: #f7f7f7;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="container">
+      <div>LOGO</div>
+      <div>NAVIGATION</div>
+    </nav>
+    <div class="header-container">
+      <div class="header-container-inner">
+        <h1>A healthy meal delivered to your door, every single day</h1>
+        <p>The smart 365-days-per-year food subscription that will make you eat healthy again. Tailored to your personal tastes and nutritional needs.</p>
+        <a href="#" class="btn">Start eating well</a>
+      </div>
+    </div>
+  </header>
+
+  <section>
+    <div class="container">
+      <h2>Some random heading</h2>
+      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus sequi sint nesciunt molestiae ea, maiores perferendis sapiente voluptates quidem esse quae aspernatur labore pariatur exercitationem et explicabo debitis dolorum cumque.</p>
+    </div>
+  </section>
+</body>
+</html>
+
+
+
